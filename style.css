@@ -58,7 +58,6 @@ select {
   outline: none;
 }
 
-
 .active {
   font-size: 13px;
   color: var(--primary-color);
@@ -231,7 +230,7 @@ main {
 /* Description Start */
 
 h4 {
-  font-size: 18px;
+  font-size: calc(1.3vw + 13px);
   margin-bottom: 10px;
 }
 .description p {
@@ -423,7 +422,7 @@ h4 {
 }
 .card__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 .card {
@@ -451,11 +450,11 @@ h4 {
   top: 16px;
   right: 16px;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 32px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .card__image .like.red {
   background-image: url(./image/svg/like.svg);
@@ -504,8 +503,7 @@ h4 {
 @media (max-width: 600px) {
   .card__wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 10px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }
-
