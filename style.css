@@ -6,11 +6,11 @@
   --border-color: #e8eaec;
   --highlight-bg: rgba(242, 66, 54, 0.1);
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 ul,
 ol {
@@ -22,7 +22,6 @@ body {
   line-height: 1.5;
   color: #344054;
   background-color: var(--white-color);
-  max-width: 480px;
 }
 a {
   text-decoration: none;
@@ -59,20 +58,12 @@ select {
   outline: none;
 }
 
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid #007bff;
-  outline-offset: 2px;
-}
+
 .active {
   font-size: 13px;
   color: var(--primary-color);
 }
-:root {
-}
+
 /* header start */
 header {
   padding: 0 16px;
@@ -432,7 +423,7 @@ h4 {
 }
 .card__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   gap: 10px;
 }
 .card {
@@ -450,7 +441,10 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: calc(0.5vw + 10px);
+}
+.card__image img {
+  height: calc(9.2vw + 74.3px);
 }
 .card__image .like {
   position: absolute;
@@ -473,13 +467,13 @@ h4 {
 }
 .card__description h5 {
   font-weight: 500;
-  font-size: 13px;
+  font-size: calc(0.8vw + 9.7px);
   line-height: 140%;
   padding: 0 16px;
-  margin-bottom: 4px;
+  margin-bottom: calc(0.5vw + 2px);
 }
 .card__description span {
-  font-size: 12px;
+  font-size: calc(0.8vw + 9px);
   font-weight: 500;
   color: #129a1b;
   padding: 0 16px;
@@ -507,3 +501,11 @@ h4 {
   color: var(--muted-text-color);
 }
 /* similarSalesman end */
+@media (max-width: 600px) {
+  .card__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+  }
+}
+
