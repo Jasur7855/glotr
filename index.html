@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./splide-4.1.3/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style></style>
+    <title>Glotr - Поиск товаров</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <button class="burgerMenu" aria-label="Открыть меню">
+          <img src="./image/svg/burger_menu.svg" alt="Меню" />
+        </button>
+        <div class="search">
+          <img src="./image/svg/search.svg" alt="Поиск" />
+          <input
+            type="text"
+            placeholder="Искать на Glotr"
+            aria-label="Поле поиска"
+          />
+        </div>
+      </div>
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about">Товары</a></li>
+          <li class="active" aria-current="page">Красота и здоровье</li>
+        </ul>
+      </nav>
+
+      <nav class="tabs" role="tablist">
+        <button role="tab" class="tab active" data-tab="description">
+          Описание
+        </button>
+        <button role="tab" class="tab" data-tab="characteristics">
+          Характеристика
+        </button>
+        <button role="tab" class="tab" data-tab="seller">Продавец</button>
+        <button role="tab" class="tab" data-tab="reviews">Отзывы</button>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./image/svg/like.svg" alt="like" class="like" />
+                <img
+                  src="./image/png/Rectangle 61451.png"
+                  alt="Фотография товара MacBook Air"
+                />
+              </li>
+              <li class="splide__slide">
+                <img src="./image/svg/like.svg" alt="like" class="like" />
+                <img
+                  src="./image/png/Rectangle 61451.png"
+                  alt="Фотография товара MacBook Air"
+                />
+              </li>
+              <li class="splide__slide">
+                <img src="./image/svg/like.svg" alt="like" class="like" />
+                <img
+                  src="./image/png/Rectangle 61451.png"
+                  alt="Фотография товара MacBook Air"
+                />
+              </li>
+              <li class="splide__slide">
+                <img src="./image/svg/like.svg" alt="like" class="like" />
+                <img
+                  src="./image/png/Rectangle 61451.png"
+                  alt="Фотография товара MacBook Air"
+                />
+              </li>
+              <li class="splide__slide">
+                <img src="./image/svg/like.svg" alt="like" class="like" />
+                <img
+                  src="./image/png/Rectangle 61451.png"
+                  alt="Фотография товара MacBook Air"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="bgWhite">
+        <h3>Apple Macbook air, M1, 512 SSD gb, 32gb RAM</h3>
+        <div class="productStatusWrapper">
+          <span class="productStatus">Нет в наличии</span>
+          <span class="productCode">Код 32453</span>
+        </div>
+        <h3 class="productPrice">12 850 000 сум/шт</h3>
+        <div class="clarifyProduct">
+          <button>Уточнить наличие</button>
+          <button class="message">
+            <img src="./image/svg/message.svg" alt="message" />
+          </button>
+        </div>
+      </section>
+      <section class="bgWhite description">
+        <h4>Описание</h4>
+        <p>
+          Оптический привод С новой силой. С появлением чипа Apple M1 наш самый
+          тонкий и лёгкий ноутбук полностью преобразился. Центральный процессор
+          теперь работает до 3,5 раза быстрее. Графический — до 5 раз. А
+          благодаря нашей передовой системе Neural Engine скорость машинного
+          обучения возросла до 9 раз. Новый Mac. Book Air работает без
+          подзарядки дольше, чем предыдущие модели.
+        </p>
+        <div class="showAll">
+          <span> Показать все</span>
+          <img src="./image/svg/arrow_down.svg" alt="" />
+        </div>
+      </section>
+      <section class="characteristics">
+        <h4>Характеристики</h4>
+        <ol>
+          <li>
+            <span class="property">Код товара</span>
+            <span class="value">MGN93RU/A </span>
+          </li>
+          <li>
+            <span class="property">Производитель</span>
+            <span class="value">Apple</span>
+          </li>
+          <li>
+            <span class="property">Разрешение экрана </span>
+            <span class="value">2560x1600</span>
+          </li>
+          <li>
+            <span class="property">Количество ядер процессора</span>
+            <span class="value"> 8</span>
+          </li>
+          <li>
+            <span class="property">Оптический привод </span>
+            <span class="value"> Отсутствует</span>
+          </li>
+        </ol>
+        <div class="showAll">
+          <span> Показать все</span>
+          <img src="./image/svg/arrow_down.svg" alt="" />
+        </div>
+      </section>
+      <section class="paymentMethod bgWhite">
+        <h4>Способы оплаты</h4>
+        <ol>
+          <li>- Наличными</li>
+          <li>- Перечислением</li>
+          <li>- Терминал UzCard</li>
+          <li>- Терминал HUMO</li>
+          <li>- POS терминал</li>
+          <li>- Рayme</li>
+        </ol>
+        <div class="showAll">
+          <span> Показать все</span>
+          <img src="./image/svg/arrow_down.svg" alt="" />
+        </div>
+      </section>
+      <section class="deliveryMethod bgWhite">
+        <h4>Способы доставки</h4>
+        <ol>
+          <li>- Доставка куръером</li>
+          <li>- Доставка почтой</li>
+        </ol>
+        <div class="showAll">
+          <span> Показать все</span>
+          <img src="./image/svg/arrow_down.svg" alt="" />
+        </div>
+      </section>
+      <section class="salesman bgWhite">
+        <div class="header">
+          <h4>Продавец</h4>
+          <a href="#" class="active">Перейти на сайт</a>
+        </div>
+        <div class="adress">
+          <div class="img">
+            <img src="./image/png/amazon.png" alt="amazon logo" />
+          </div>
+          <div>
+            <span class="title">Amazon</span>
+            <span class="subtitle">г. Ташкент, Узбекистан</span>
+          </div>
+        </div>
+        <div class="salesman__Info">
+          <ol>
+            <li>
+              <img src="./image/svg/clock.svg" alt="clock" />
+              <p>
+                Сегодня работает до 18:00<span class="active">Весь график</span>
+              </p>
+            </li>
+            <li>
+              <img src="./image/svg/phone.svg" alt="phone" />
+              <p>+998 99 ...<span class="active">показать номер</span></p>
+            </li>
+            <li>
+              <img src="./image/svg/world.svg" alt="" />
+              <p class="active">amazon.com</p>
+            </li>
+          </ol>
+          <div class="salesman__Info__btns">
+            <button>Все товары продавца</button>
+            <button>Заказать звонок</button>
+          </div>
+        </div>
+      </section>
+      <section class="similarSalesman">
+        <div class="similarHeader">
+          <h4>Похожие товары продавца</h4>
+          <img src="./image/svg/arrow-right.svg" alt="">
+        </div>
+      </section>
+    </main>
+    <script src="./splide-4.1.3/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide(".splide", {
+          type: "loop",
+          autoplay: true,
+          interval: 3000,
+          arrows: false,
+          pagination: true,
+          perPage: 1,
+          drag: true,
+          gap: "10px",
+          autoplay: {
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            resetProgress: false,
+          },
+        }).mount();
+      });
+    </script>
+  </body>
+</html>
