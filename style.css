@@ -329,7 +329,7 @@ h4 {
 }
 
 .paymentMethod ol.expanded {
-  max-height: 500px; 
+  max-height: 500px;
 }
 
 .showAll {
@@ -420,7 +420,8 @@ h4 {
 }
 /* Salesman end */
 /* similarSalesman start */
-.similarSalesman {
+.similarSalesman,
+.recommended {
   padding: 16px;
 }
 .similarHeader {
@@ -456,6 +457,17 @@ h4 {
   top: 16px;
   right: 16px;
   cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card__image .like.red {
+  background-image: url(./image/svg/like.svg);
+}
+.card__image .like.greey {
+  background-image: url(./image/svg/like2.svg);
 }
 .card__description {
 }
