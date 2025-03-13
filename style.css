@@ -201,6 +201,7 @@ main {
   font-size: 22px;
   color: #f24236;
   line-height: 126%;
+  margin-bottom: 16px;
 }
 .clarifyProduct {
   display: flex;
@@ -364,5 +365,70 @@ h4 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
+}
+.card__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.card {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0 14px;
+  border-radius: 8px;
+}
+.card__image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.card__image .like {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+.card__description {
+}
+.card__description h5 {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  padding: 0 16px;
+  margin-bottom: 4px;
+}
+.card__description span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #129a1b;
+  padding: 0 16px;
+}
+
+.card__description .yellow{
+  color: #FAC102;
+}
+.card__description .red{
+  color: #F24236;
+}
+.card__description h4 {
+  color: #f24236;
+  padding: 0 16px 8px;
+  border-bottom: 1px solid #f6f8f9;
+}
+.card__description h6 {
+  font-size: 14px;
+  line-height: 110%;
+  font-weight: 500;
+  padding: 0 16px;
+  margin-bottom: 6px;
+}
+.card__description span:nth-child(5) {
+  color: #667085;
 }
 /* similarSalesman end */
