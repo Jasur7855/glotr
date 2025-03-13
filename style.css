@@ -1,8 +1,16 @@
+:root {
+  --primary-color: #f24236;
+  --muted-text-color: #667085;
+  --background-color: #f5f6f8;
+  --white-color: #fff;
+  --border-color: #e8eaec;
+  --highlight-bg: rgba(242, 66, 54, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gilroy";
 }
 ul,
 ol {
@@ -13,7 +21,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #344054;
-  background-color: #fff;
+  background-color: var(--white-color);
   max-width: 480px;
 }
 a {
@@ -30,7 +38,11 @@ button {
   border: none;
   cursor: pointer;
   font-family: inherit;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
+
 input,
 textarea,
 button,
@@ -57,7 +69,9 @@ select:focus-visible {
 }
 .active {
   font-size: 13px;
-  color: #f24236;
+  color: var(--primary-color);
+}
+:root {
 }
 /* header start */
 header {
@@ -81,7 +95,7 @@ header {
   display: flex;
   flex-grow: 100;
   gap: 0 6px;
-  background-color: #f5f6f8;
+  background-color: var(--background-color);
   padding: 8px 16px;
   border-radius: 8px;
 }
@@ -118,14 +132,14 @@ header {
 
 .breadcrumb a {
   text-decoration: none;
-  color: #667085;
+  color: var(--muted-text-color);
 }
 
 .breadcrumb a:hover {
   text-decoration: underline;
 }
 .breadcrumb ul .active {
-  color: #f24236;
+  color: var(--primary-color);
 }
 .tabs {
   display: flex;
@@ -138,13 +152,13 @@ header {
   font-size: 14px;
 }
 .tabs .tab.active {
-  color: #f24236;
-  border-bottom: 1px solid #f24236;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
 }
 /* header end */
 /* slider start */
 main {
-  background-color: #f5f6f8;
+  background-color: var(--background-color);
   padding-top: 14px;
 }
 .splide {
@@ -157,7 +171,7 @@ main {
   font-size: 18px;
   font-weight: bold;
   padding: 15px;
-  background: #fff;
+  background: var(--white-color);
   border-radius: 8px;
   min-height: 50px;
   position: relative;
@@ -169,13 +183,13 @@ main {
   cursor: pointer;
 }
 .splide__pagination__page.is-active {
-  background-color: #f24236;
+  background-color: var(--primary-color);
 }
 /* slider end */
 /* productInfo Start */
 .bgWhite {
   padding: 16px;
-  background-color: #fff;
+  background-color: var(--white-color);
   margin-bottom: 12px;
   border-radius: 8px;
 }
@@ -193,13 +207,13 @@ main {
   padding: 4px 12px;
   font-size: 13px;
   line-height: 124%;
-  background-color: #f242361a;
-  color: #f24236;
+  background-color: var(--highlight-bg);
+  color: var(--primary-color);
   border-radius: 24px;
 }
 .productPrice {
   font-size: 22px;
-  color: #f24236;
+  color: var(--primary-color);
   line-height: 126%;
   margin-bottom: 16px;
 }
@@ -209,8 +223,8 @@ main {
 }
 .clarifyProduct button:nth-child(1) {
   flex-grow: 100;
-  background-color: #f24236;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--white-color);
   border-radius: 8px;
 }
 .message {
@@ -219,7 +233,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f242361a;
+  background-color: var(--highlight-bg);
   border-radius: 8px;
 }
 /* productInfo End */
@@ -247,46 +261,95 @@ h4 {
 /* Description end */
 /* Characteristics start*/
 .characteristics {
-  background-color: #fff;
+  background-color: var(--white-color);
   padding: 16px 0;
   border-radius: 8px;
   margin-bottom: 12px;
 }
+
 .characteristics h4 {
   padding: 0 16px;
 }
+
 .characteristics ol {
   margin-bottom: 16px;
+  max-height: 150px; /* Ограничение высоты */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
+
+.characteristics ol.expanded {
+  max-height: none; /* При раскрытии */
+}
+
 .characteristics ol li {
   padding: 8px 16px;
   display: flex;
   justify-content: space-between;
 }
+
 .characteristics ol li:nth-child(odd) {
   background-color: #f6f8f9;
 }
+
 .characteristics ol li:nth-child(even) {
-  background-color: #fff;
+  background-color: var(--white-color);
 }
+
 .characteristics .showAll {
   padding: 0 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
 }
+
+.characteristics .showAll img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.characteristics .showAll.active img {
+  transform: rotate(180deg);
+}
+
 /* Characteristics end*/
 /* paymentMethod and deliveryMethod start*/
 .paymentMethod {
   margin-bottom: 12px;
 }
-.paymentMethod ol,
-.deliveryMethod ol {
+
+.paymentMethod ol {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-bottom: 16px;
+  max-height: 96px; /* Показываем только 3 элемента */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
+
+.paymentMethod ol.expanded {
+  max-height: 500px; 
+}
+
+.showAll {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.showAll img {
+  transition: transform 0.3s ease;
+}
+
+.showAll.expanded img {
+  transform: rotate(180deg);
+}
+
 /* paymentMethod and deliveryMethod end */
 /* Salesman start */
-.salesman .header {
+.salesman__header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
@@ -303,7 +366,7 @@ h4 {
 .salesman .adress .img {
   width: 80px;
   height: 56px;
-  border: 1px solid #e8eaec;
+  border: 1px solid var(--border-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,7 +382,7 @@ h4 {
 }
 .subtitle {
   font-size: 15px;
-  color: #e8eaec;
+  color: var(--border-color);
 }
 .salesman__Info ol {
   display: flex;
@@ -348,12 +411,12 @@ h4 {
   cursor: pointer;
   font-size: 14px;
   line-height: 170%;
-  background-color: #f242361a;
-  color: #f24236;
+  background-color: var(--highlight-bg);
+  color: var(--primary-color);
 }
 .salesman__Info__btns button:nth-child(1) {
-  background-color: #f24236;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 /* Salesman end */
 /* similarSalesman start */
@@ -410,14 +473,14 @@ h4 {
   padding: 0 16px;
 }
 
-.card__description .yellow{
-  color: #FAC102;
+.card__description .yellow {
+  color: #fac102;
 }
-.card__description .red{
-  color: #F24236;
+.card__description .red {
+  color: var(--primary-color);
 }
 .card__description h4 {
-  color: #f24236;
+  color: var(--primary-color);
   padding: 0 16px 8px;
   border-bottom: 1px solid #f6f8f9;
 }
@@ -429,6 +492,6 @@ h4 {
   margin-bottom: 6px;
 }
 .card__description span:nth-child(5) {
-  color: #667085;
+  color: var(--muted-text-color);
 }
 /* similarSalesman end */
